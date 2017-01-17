@@ -1,0 +1,138 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based scoping.
+# Code completion support is available so start typing for available options.
+swagger: '2.0'
+
+# This is your document metadata
+info:
+  version: "0.0.0"
+  title: Notification Worker
+
+# Describe your paths here
+paths:
+  # This is a path endpoint. Change it.
+  /DynamicClientLeft:
+    # This is a HTTP operation
+    get:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+                    Differences are in these tags-
+                    
+                    "CommandType":"DynamicClientLeft"
+                    
+                    "Action":"update"
+
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Alert would be of type - "client_name" "manufacturer" rejoined "Al_Name" 
+          # A schema describing your response object.
+          # Use JSON Schema format
+          schema:
+            title: ArrayOfPersons
+            type: array
+            items:
+              title: Person
+              type: object
+              properties:
+                name:
+                  type: string
+                single:
+                  type: boolean
+
+  
+  /DynamicClientJoined:
+    # This is a HTTP operation
+    get:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+                    Differences are in these tags-
+                    
+                    "CommandType":"DynamicClientJoined"
+                    
+                    "Action":"update"
+
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Alert would be of type - "client_name" "manufacturer" just Left "Al_Name" 
+          # A schema describing your response object.
+          # Use JSON Schema format
+          schema:
+            title: ArrayOfPersons
+            type: array
+            items:
+              title: Person
+              type: object
+              properties:
+                name:
+                  type: string
+                single:
+                  type: boolean
+  
+  
+  
+  /DynamicClientAdded:
+    # This is a HTTP operation
+    get:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+                    Differences are in these tags-
+                    
+                    "CommandType":"DynamicClientAdded"
+                    
+                    "Action":"add"
+
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Alert would be of type -  An unknown device "Manufacturer_Name" just joined "Al_Name"
+          # A schema describing your response object.
+          # Use JSON Schema format
+          schema:
+            title: ArrayOfPersons
+            type: array
+            items:
+              title: Person
+              type: object
+              properties:
+                name:
+                  type: string
+                single:
+                  type: boolean
+  /DynamicClientRemoved:
+    # This is a HTTP operation
+    get:
+      # Describe this verb here. Note: you can use markdown
+      description: |
+                    Differences are in these tags-
+                    
+                    "CommandType":"DynamicClientRemoved"
+                    
+                    "Action":"remove"
+
+      # Expected responses for this operation:
+      responses:
+        # Response code
+        200:
+          description: Alert would be of type -  "Al_Name"'s "client_name" is reset
+          # A schema describing your response object.
+          # Use JSON Schema format
+          schema:
+            title: ArrayOfPersons
+            type: array
+            items:
+              title: Person
+              type: object
+              properties:
+                name:
+                  type: string
+                single:
+                  type: boolean
+  
+  
+                  
+  

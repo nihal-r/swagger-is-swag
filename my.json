@@ -1,0 +1,489 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "0.0.0",
+        "title": "Notification Worker"
+    },
+    "paths": {
+        "/DynamicClientLeft": {
+            "get": {
+                "description": "Differences are in these tags-\n\n\"CommandType\":\"DynamicClientLeft\"\n\n\"Action\":\"update\"\n",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "in": "body",
+                        "description": "What a default Payload would look like",
+                        "schema": {
+                            "$ref": "#/definitions/WifiPayload"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Alert would be of type - \"client_name\" \"manufacturer\" rejoined \"Al_Name\"",
+                        "schema": {
+                            "$ref": "#/definitions/GCMWifi"
+                        }
+                    }
+                }
+            }
+        },
+        "/DynamicClientJoined": {
+            "get": {
+                "description": "Differences are in these tags-\n\n\"CommandType\":\"DynamicClientJoined\"\n\n\"Action\":\"update\"\n",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "in": "body",
+                        "description": "What a default Payload would look like",
+                        "schema": {
+                            "$ref": "#/definitions/WifiPayload"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Alert would be of type - \"client_name\" \"manufacturer\" just Left \"Al_Name\"",
+                        "schema": {
+                            "$ref": "#/definitions/GCMWifi"
+                        }
+                    }
+                }
+            }
+        },
+        "/DynamicClientAdded": {
+            "get": {
+                "description": "Differences are in these tags-\n\n\"CommandType\":\"DynamicClientAdded\"\n\n\"Action\":\"add\"\n",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "in": "body",
+                        "description": "What a default Payload would look like",
+                        "schema": {
+                            "$ref": "#/definitions/WifiPayload"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Alert would be of type -  An unknown device \"Manufacturer_Name\" just joined \"Al_Name\"",
+                        "schema": {
+                            "$ref": "#/definitions/GCMWifi"
+                        }
+                    }
+                }
+            }
+        },
+        "/DynamicClientRemoved": {
+            "get": {
+                "description": "Differences are in these tags-\n\n\"CommandType\":\"DynamicClientRemoved\"\n\n\"Action\":\"remove\"\n",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "in": "body",
+                        "description": "What a default Payload would look like",
+                        "schema": {
+                            "$ref": "#/definitions/WifiPayload"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Alert would be of type -  \"Al_Name\"'s \"client_name\" is reset",
+                        "schema": {
+                            "$ref": "#/definitions/GCMWifi"
+                        }
+                    }
+                }
+            }
+        },
+        "/DynamicIndexUpdated": {
+            "get": {
+                "description": "Differences are in these tags-\n\n\"CommandType\":\"DynamicIndexUpdated\"\n\n\"Action\":\"UpdateIndex\"\n",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "in": "body",
+                        "description": "What a default Payload would look like",
+                        "schema": {
+                            "$ref": "#/definitions/DevicePayload"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Alert would depend on the device type and the operation performed by it",
+                        "schema": {
+                            "$ref": "#/definitions/GCM"
+                        }
+                    }
+                }
+            }
+        },
+        "/DirectPass": {
+            "get": {
+                "description": "Is passed as is, the alert is also given by the Cloud and not stored in any databases",
+                "parameters": [
+                    {
+                        "name": "payload",
+                        "in": "body",
+                        "description": "What a default Payload would look like",
+                        "schema": {
+                            "$ref": "#/definitions/directPass"
+                        },
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Alert would depend on the device type and the operation performed by it",
+                        "schema": {
+                            "$ref": "#/definitions/directPassGCM"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "GCM": {
+            "type": "object",
+            "properties": {
+                "mac": {
+                    "type": "string"
+                },
+                "badge": {
+                    "type": "integer"
+                },
+                "users": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "index": {
+                    "type": "string"
+                },
+                "indexname": {
+                    "type": "string"
+                },
+                "indexValue": {
+                    "type": "string"
+                },
+                "devicetype": {
+                    "type": "string"
+                },
+                "devicename": {
+                    "type": "string"
+                },
+                "alert": {
+                    "type": "string"
+                },
+                "registration_ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "directPassGCM": {
+            "type": "object",
+            "properties": {
+                "mac": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "users": {
+                    "type": "string"
+                },
+                "NotiType": {
+                    "type": "string"
+                },
+                "alert": {
+                    "type": "string"
+                },
+                "registration_ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "DevicePayload": {
+            "type": "object",
+            "properties": {
+                "mac": {
+                    "type": "string"
+                },
+                "user_list": {
+                    "type": "string"
+                },
+                "UTCTime": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/innerData"
+                },
+                "dbRows": {
+                    "$ref": "#/definitions/innerdbRows"
+                }
+            }
+        },
+        "directPass": {
+            "type": "object",
+            "properties": {
+                "mac": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "users": {
+                    "type": "string"
+                },
+                "NotiType": {
+                    "type": "string"
+                },
+                "alert": {
+                    "type": "string"
+                }
+            }
+        },
+        "innerData": {
+            "type": "object",
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "Action": {
+                    "type": "string"
+                },
+                "HashNow": {
+                    "type": "string"
+                },
+                "Devices": {
+                    "$ref": "#/definitions/innerDevices"
+                }
+            }
+        },
+        "innerDevices": {
+            "type": "object",
+            "properties": {
+                "DeviceValues": {
+                    "type": "object",
+                    "properties": {
+                        "IndexID": {
+                            "$ref": "#/definitions/innerIndexID"
+                        }
+                    }
+                }
+            }
+        },
+        "innerIndexID": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Value": {
+                    "type": "string"
+                }
+            }
+        },
+        "WifiPayload": {
+            "type": "object",
+            "properties": {
+                "mac": {
+                    "type": "string"
+                },
+                "user_list": {
+                    "type": "string"
+                },
+                "UTCTime": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/innerItem"
+                },
+                "wifiClients": {
+                    "type": "string"
+                },
+                "dbRows": {
+                    "$ref": "#/definitions/innerdbRows"
+                }
+            }
+        },
+        "innerItem": {
+            "type": "object",
+            "properties": {
+                "CommandType": {
+                    "type": "string"
+                },
+                "Action": {
+                    "type": "string"
+                },
+                "Clients": {
+                    "$ref": "#/definitions/innerClient"
+                },
+                "HashNow": {
+                    "type": "string"
+                }
+            }
+        },
+        "innerClient": {
+            "type": "object",
+            "properties": {
+                "ClientID": {
+                    "$ref": "#/definitions/innerClientID"
+                }
+            }
+        },
+        "GCMWifi": {
+            "type": "object",
+            "properties": {
+                "badge": {
+                    "type": "integer"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "alert": {
+                    "type": "string"
+                },
+                "users": {
+                    "type": "string"
+                },
+                "NotiType": {
+                    "type": "string"
+                },
+                "mac": {
+                    "type": "string"
+                },
+                "registration_ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "innerClientID": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Connection": {
+                    "type": "string"
+                },
+                "MAC": {
+                    "type": "string"
+                },
+                "Type": {
+                    "type": "string"
+                },
+                "LastKnownIP": {
+                    "type": "string"
+                },
+                "Active": {
+                    "type": "string"
+                },
+                "UseAsPresence": {
+                    "type": "string"
+                },
+                "LastActiveEpoch": {
+                    "type": "string"
+                },
+                "Wait": {
+                    "type": "string"
+                },
+                "Block": {
+                    "type": "string"
+                },
+                "Schedule": {
+                    "type": "string"
+                },
+                "Manufacturer": {
+                    "type": "string"
+                },
+                "RSSI": {
+                    "type": "string"
+                },
+                "ForceInActive": {
+                    "type": "string"
+                },
+                "CanBlock": {
+                    "type": "string"
+                },
+                "Category": {
+                    "type": "string"
+                }
+            }
+        },
+        "innerdbRows": {
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Connection": {
+                    "type": "string"
+                },
+                "MAC": {
+                    "type": "string"
+                },
+                "Type": {
+                    "type": "string"
+                },
+                "LastKnownIP": {
+                    "type": "string"
+                },
+                "Active": {
+                    "type": "string"
+                },
+                "UseAsPresnce": {
+                    "type": "string"
+                },
+                "LastActiveEpoch": {
+                    "type": "string"
+                },
+                "Wait": {
+                    "type": "string"
+                },
+                "Block": {
+                    "type": "string"
+                },
+                "Schedule": {
+                    "type": "string"
+                },
+                "Manufacturer": {
+                    "type": "string"
+                },
+                "RSSI": {
+                    "type": "string"
+                },
+                "ForceInActive": {
+                    "type": "string"
+                },
+                "CanBlock": {
+                    "type": "string"
+                },
+                "Category": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
