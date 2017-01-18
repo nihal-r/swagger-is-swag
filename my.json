@@ -190,6 +190,21 @@
                         "type": "string"
                     }
                 }
+            },
+            "example": {
+                "mac": "251175433168140",
+                "badge": 1,
+                "users": "522225988",
+                "time": "1484743183000",
+                "index": "1",
+                "indexValue": "true",
+                "Devicetype": "64",
+                "devicename": "My LED",
+                "alert": "My LED is turned On",
+                "registration_ids": [
+                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
+                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
+                ]
             }
         },
         "directPassGCM": {
@@ -232,9 +247,6 @@
                 },
                 "data": {
                     "$ref": "#/definitions/innerData"
-                },
-                "dbRows": {
-                    "$ref": "#/definitions/innerdbRows"
                 }
             }
         },
