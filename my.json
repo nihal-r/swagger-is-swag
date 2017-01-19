@@ -23,7 +23,7 @@
                     "200": {
                         "description": "Alert would be of type - \"client_name\" \"manufacturer\" rejoined \"Al_Name\"",
                         "schema": {
-                            "$ref": "#/definitions/GCMWifi"
+                            "$ref": "#/definitions/GCMWifi1"
                         }
                     }
                 }
@@ -47,7 +47,7 @@
                     "200": {
                         "description": "Alert would be of type - \"client_name\" \"manufacturer\" just Left \"Al_Name\"",
                         "schema": {
-                            "$ref": "#/definitions/GCMWifi"
+                            "$ref": "#/definitions/GCMWifi2"
                         }
                     }
                 }
@@ -71,7 +71,7 @@
                     "200": {
                         "description": "Alert would be of type -  An unknown device \"Manufacturer_Name\" just joined \"Al_Name\"",
                         "schema": {
-                            "$ref": "#/definitions/GCMWifi"
+                            "$ref": "#/definitions/GCMWifi3"
                         }
                     }
                 }
@@ -95,7 +95,7 @@
                     "200": {
                         "description": "Alert would be of type -  \"Al_Name\"'s \"client_name\" is reset",
                         "schema": {
-                            "$ref": "#/definitions/GCMWifi"
+                            "$ref": "#/definitions/GCMWifi4"
                         }
                     }
                 }
@@ -691,7 +691,7 @@
                 }
             }
         },
-        "GCMWifi": {
+        "GCMWifi1": {
             "type": "object",
             "properties": {
                 "badge": {
@@ -722,8 +722,122 @@
             "example":{
               "badge":209,
               "time":"1484743183000",
-              "alert":"My zenfone 5 (ASUSTek ) just Left ALMOND +",
-              "users":"522256983",
+              "alert":"Harish zenfone 5 (ASUSTek ) just Left ALMOND +",
+              "users":"522225988",
+              "NotiType":"wifiClients",
+              "mac":"251175433168140",
+              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
+              }
+        },
+        "GCMWifi4": {
+            "type": "object",
+            "properties": {
+                "badge": {
+                    "type": "integer"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "alert": {
+                    "type": "string"
+                },
+                "users": {
+                    "type": "string"
+                },
+                "NotiType": {
+                    "type": "string"
+                },
+                "mac": {
+                    "type": "string"
+                },
+                "registration_ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "example":{
+              "badge":209,
+              "time":"1484743183000",
+              "alert":"Harish zenfone 5 (ASUSTek ) just Removed From ALMOND +",
+              "users":"522225988",
+              "NotiType":"wifiClients",
+              "mac":"251175433168140",
+              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
+              }
+        },
+        "GCMWifi3": {
+            "type": "object",
+            "properties": {
+                "badge": {
+                    "type": "integer"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "alert": {
+                    "type": "string"
+                },
+                "users": {
+                    "type": "string"
+                },
+                "NotiType": {
+                    "type": "string"
+                },
+                "mac": {
+                    "type": "string"
+                },
+                "registration_ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "example":{
+              "badge":209,
+              "time":"1484743183000",
+              "alert":"Harish zenfone 5 (ASUSTek ) just Added to ALMOND +",
+              "users":"522225988",
+              "NotiType":"wifiClients",
+              "mac":"251175433168140",
+              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
+              }
+        },
+        "GCMWifi2": {
+            "type": "object",
+            "properties": {
+                "badge": {
+                    "type": "integer"
+                },
+                "time": {
+                    "type": "string"
+                },
+                "alert": {
+                    "type": "string"
+                },
+                "users": {
+                    "type": "string"
+                },
+                "NotiType": {
+                    "type": "string"
+                },
+                "mac": {
+                    "type": "string"
+                },
+                "registration_ids": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "example":{
+              "badge":209,
+              "time":"1484743183000",
+              "alert":"Harish zenfone 5 (ASUSTek ) just Joined ALMOND +",
+              "users":"522225988",
               "NotiType":"wifiClients",
               "mac":"251175433168140",
               "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
