@@ -235,12 +235,7 @@
               "time":"1484743183000",
               "NotiType":"DirectPass",
               "alert":"Whatever alert you want to send directly and not have saved in any cassandra database",
-
-                
-                
-                
-                
-                "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
+              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
             }
         },
         "DevicePayload": {
@@ -263,11 +258,6 @@
               "mac": "251175433168140",
               "user_list": "522225988",
               "UTCTime": "1484743183000",
-              "data": {
-                "CommandType":"DynamicIndexUpdated",
-                "Action":"UpdateIndex",
-                "HashNow":"5faf3a031d39781cd5d7e77a3522bb49"
-              }
             }
         },
         "directPass": {
@@ -591,3 +581,4 @@
               }
         }
     }
+}
