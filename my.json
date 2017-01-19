@@ -14,7 +14,7 @@
                         "in": "body",
                         "description": "What a default Payload would look like",
                         "schema": {
-                            "$ref": "#/definitions/WifiPayload"
+                            "$ref": "#/definitions/WifiPayload1"
                         },
                         "required": true
                     }
@@ -38,7 +38,7 @@
                         "in": "body",
                         "description": "What a default Payload would look like",
                         "schema": {
-                            "$ref": "#/definitions/WifiPayload"
+                            "$ref": "#/definitions/WifiPayload2"
                         },
                         "required": true
                     }
@@ -62,7 +62,7 @@
                         "in": "body",
                         "description": "What a default Payload would look like",
                         "schema": {
-                            "$ref": "#/definitions/WifiPayload"
+                            "$ref": "#/definitions/WifiPayload3"
                         },
                         "required": true
                     }
@@ -86,7 +86,7 @@
                         "in": "body",
                         "description": "What a default Payload would look like",
                         "schema": {
-                            "$ref": "#/definitions/WifiPayload"
+                            "$ref": "#/definitions/WifiPayload4"
                         },
                         "required": true
                     }
@@ -258,6 +258,21 @@
               "mac": "251175433168140",
               "user_list": "522225988",
               "UTCTime": "1484743183000",
+              "data":{
+                "CommandType":"DynamicIndexUpdated",
+                "Action":"UpdateIndex",
+                "HashNow":"5faf3a031d39781cd5d7e77a3522bb49",
+                "Devices":{  
+                  "16":{
+                    "DeviceValues":{
+                      "1":{ 
+                        "Name":"SWITCH BINARY",
+                        "Value":"true"
+                        }
+                      }
+                    }
+                  }
+                }
             }
         },
         "directPass": {
@@ -284,7 +299,7 @@
               "time":"1484743183000",
               "users":"522225988",
               "NotiType":"DirectPass",
-              "alert":"Whatever alert you want to send directly and not have saved in any cassandra database"
+              "alert":"Whatever alert you want to send directly and not have saved in any cassandra database",
             }
         },
         "innerData": {
@@ -303,11 +318,21 @@
                     "$ref": "#/definitions/innerDevices"
                 }
             },
-            "example": {
-              "CommandType":"DynamicIndexUpdated",
-              "Action":"UpdateIndex",
-              "HashNow":"5faf3a031d39781cd5d7e77a3522bb49"
-            }
+            "example":{
+                "CommandType":"DynamicIndexUpdated",
+                "Action":"UpdateIndex",
+                "HashNow":"5faf3a031d39781cd5d7e77a3522bb49",
+                "Devices":{  
+                  "16":{
+                    "DeviceValues":{
+                      "1":{ 
+                        "Name":"SWITCH BINARY",
+                        "Value":"true"
+                        }
+                      }
+                    }
+                }
+              }
           },
         "innerDevices": {
             "type": "object",
@@ -320,7 +345,15 @@
                         }
                     }
                 }
-            }
+            },
+            "example":{
+               "DeviceValues":{
+                 "1":{
+                   "Name":"SWITCH BINARY",
+                   "Value":"true"
+                   }
+                }
+              }
         },
         "innerIndexID": {
             "type": "object",
@@ -337,7 +370,7 @@
               "Value":"true"
               }
         },
-        "WifiPayload": {
+        "WifiPayload2": {
             "type": "object",
             "properties": {
                 "mac": {
@@ -364,8 +397,275 @@
               "user_list":"522225988",
               "UTCTime":"1484743183000",
               "wifiClients":"true",
+              "data":{
+                "CommandType":"DynamicClientJoined",
+                "Action":"update",
+                "HashNow":"759b96aee60cd590a341d733ed9a3a26",
+                "Clients":{  
+                  "29":{ 
+                     "Name":"harish zenfone 5",
+                     "Connection":"wireless",
+                     "MAC":"38:2c:4a:1f:5a:68",
+                     "Type":"other",
+                     "LastKnownIP":"10.10.10.177",
+                     "Active":"false",
+                     "UseAsPresence":"true",
+                     "LastActiveEpoch":"1477906060",
+                     "Wait":"1",
+                     "Block":"0",
+                     "Schedule":"0,0,0,0,0,0,0",
+                     "Manufacturer":"ASUSTek ",
+                     "RSSI":"-27",
+                     "ForceInActive":"0",
+                     "CanBlock":"true",
+                     "Category":"Others"
+                    }
+                  }
+                },
+                "dbrows":{
+                  "Name":"harish zenfone 5",
+                  "Connection":"wireless",
+                  "MAC":"38:2c:4a:1f:5a:68",
+                  "Type":"other",
+                  "LastKnownIP":"10.10.10.177",
+                  "Active":"false",
+                  "UseAsPresence":"true",
+                  "LastActiveEpoch":"1477906060",
+                  "Wait":"1",
+                  "Block":"0",
+                  "Schedule":"0,0,0,0,0,0,0",
+                  "Manufacturer":"ASUSTek ",
+                  "RSSI":"-27",
+                  "ForceInActive":"0",
+                  "CanBlock":"true",
+                  "Category":"Others",
+                  "ID":"28"
+                  }
               }
         },
+        "WifiPayload3": {
+            "type": "object",
+            "properties": {
+                "mac": {
+                    "type": "string"
+                },
+                "user_list": {
+                    "type": "string"
+                },
+                "UTCTime": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/innerItem"
+                },
+                "wifiClients": {
+                    "type": "string"
+                },
+                "dbRows": {
+                    "$ref": "#/definitions/innerdbRows"
+                }
+            },
+            "example":{
+              "mac":"251175433168140",
+              "user_list":"522225988",
+              "UTCTime":"1484743183000",
+              "wifiClients":"true",
+              "data":{
+                "CommandType":"DynamicClientAdded",
+                "Action":"add",
+                "HashNow":"759b96aee60cd590a341d733ed9a3a26",
+                "Clients":{  
+                  "29":{ 
+                     "Name":"harish zenfone 5",
+                     "Connection":"wireless",
+                     "MAC":"38:2c:4a:1f:5a:68",
+                     "Type":"other",
+                     "LastKnownIP":"10.10.10.177",
+                     "Active":"false",
+                     "UseAsPresence":"true",
+                     "LastActiveEpoch":"1477906060",
+                     "Wait":"1",
+                     "Block":"0",
+                     "Schedule":"0,0,0,0,0,0,0",
+                     "Manufacturer":"ASUSTek ",
+                     "RSSI":"-27",
+                     "ForceInActive":"0",
+                     "CanBlock":"true",
+                     "Category":"Others"
+                    }
+                  }
+                },
+                "dbrows":{
+                  "Name":"harish zenfone 5",
+                  "Connection":"wireless",
+                  "MAC":"38:2c:4a:1f:5a:68",
+                  "Type":"other",
+                  "LastKnownIP":"10.10.10.177",
+                  "Active":"false",
+                  "UseAsPresence":"true",
+                  "LastActiveEpoch":"1477906060",
+                  "Wait":"1",
+                  "Block":"0",
+                  "Schedule":"0,0,0,0,0,0,0",
+                  "Manufacturer":"ASUSTek ",
+                  "RSSI":"-27",
+                  "ForceInActive":"0",
+                  "CanBlock":"true",
+                  "Category":"Others",
+                  "ID":"28"
+                  }
+              }
+        },
+        "WifiPayload4": {
+            "type": "object",
+            "properties": {
+                "mac": {
+                    "type": "string"
+                },
+                "user_list": {
+                    "type": "string"
+                },
+                "UTCTime": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/innerItem"
+                },
+                "wifiClients": {
+                    "type": "string"
+                },
+                "dbRows": {
+                    "$ref": "#/definitions/innerdbRows"
+                }
+            },
+            "example":{
+              "mac":"251175433168140",
+              "user_list":"522225988",
+              "UTCTime":"1484743183000",
+              "wifiClients":"true",
+              "data":{
+                "CommandType":"DynamicClientRemoved",
+                "Action":"remove",
+                "HashNow":"759b96aee60cd590a341d733ed9a3a26",
+                "Clients":{  
+                  "29":{ 
+                     "Name":"harish zenfone 5",
+                     "Connection":"wireless",
+                     "MAC":"38:2c:4a:1f:5a:68",
+                     "Type":"other",
+                     "LastKnownIP":"10.10.10.177",
+                     "Active":"false",
+                     "UseAsPresence":"true",
+                     "LastActiveEpoch":"1477906060",
+                     "Wait":"1",
+                     "Block":"0",
+                     "Schedule":"0,0,0,0,0,0,0",
+                     "Manufacturer":"ASUSTek ",
+                     "RSSI":"-27",
+                     "ForceInActive":"0",
+                     "CanBlock":"true",
+                     "Category":"Others"
+                    }
+                  }
+                },
+                "dbrows":{
+                  "Name":"harish zenfone 5",
+                  "Connection":"wireless",
+                  "MAC":"38:2c:4a:1f:5a:68",
+                  "Type":"other",
+                  "LastKnownIP":"10.10.10.177",
+                  "Active":"false",
+                  "UseAsPresence":"true",
+                  "LastActiveEpoch":"1477906060",
+                  "Wait":"1",
+                  "Block":"0",
+                  "Schedule":"0,0,0,0,0,0,0",
+                  "Manufacturer":"ASUSTek ",
+                  "RSSI":"-27",
+                  "ForceInActive":"0",
+                  "CanBlock":"true",
+                  "Category":"Others",
+                  "ID":"28"
+                  }
+              }
+        },
+        
+        
+        
+        "WifiPayload1": {
+            "type": "object",
+            "properties": {
+                "mac": {
+                    "type": "string"
+                },
+                "user_list": {
+                    "type": "string"
+                },
+                "UTCTime": {
+                    "type": "string"
+                },
+                "data": {
+                    "$ref": "#/definitions/innerItem"
+                },
+                "wifiClients": {
+                    "type": "string"
+                },
+                "dbRows": {
+                    "$ref": "#/definitions/innerdbRows"
+                }
+            },
+            "example":{
+              "mac":"251175433168140",
+              "user_list":"522225988",
+              "UTCTime":"1484743183000",
+              "wifiClients":"true",
+              "data":{
+                "CommandType":"DynamicClientLeft",
+                "Action":"update",
+                "HashNow":"759b96aee60cd590a341d733ed9a3a26",
+                "Clients":{  
+                  "29":{ 
+                     "Name":"harish zenfone 5",
+                     "Connection":"wireless",
+                     "MAC":"38:2c:4a:1f:5a:68",
+                     "Type":"other",
+                     "LastKnownIP":"10.10.10.177",
+                     "Active":"false",
+                     "UseAsPresence":"true",
+                     "LastActiveEpoch":"1477906060",
+                     "Wait":"1",
+                     "Block":"0",
+                     "Schedule":"0,0,0,0,0,0,0",
+                     "Manufacturer":"ASUSTek ",
+                     "RSSI":"-27",
+                     "ForceInActive":"0",
+                     "CanBlock":"true",
+                     "Category":"Others"
+                    }
+                  }
+                },
+                "dbrows":{
+                  "Name":"harish zenfone 5",
+                  "Connection":"wireless",
+                  "MAC":"38:2c:4a:1f:5a:68",
+                  "Type":"other",
+                  "LastKnownIP":"10.10.10.177",
+                  "Active":"false",
+                  "UseAsPresence":"true",
+                  "LastActiveEpoch":"1477906060",
+                  "Wait":"1",
+                  "Block":"0",
+                  "Schedule":"0,0,0,0,0,0,0",
+                  "Manufacturer":"ASUSTek ",
+                  "RSSI":"-27",
+                  "ForceInActive":"0",
+                  "CanBlock":"true",
+                  "Category":"Others",
+                  "ID":"28"
+                  }
+              }
+        },
+
         "innerItem": {
             "type": "object",
             "properties": {
@@ -382,11 +682,6 @@
                     "type": "string"
                 }
             },
-            "example":{
-              "CommandType":"DynamicClientRemoved",
-              "Action":"remove",
-              "HashNow":"759b96aee60cd590a341d733ed9a3a26"
-              }
         },
         "innerClient": {
             "type": "object",
@@ -485,25 +780,7 @@
                 "Category": {
                     "type": "string"
                 }
-            },
-            "example":{
-              "Name":"MI4W-MiPhone",
-              "Connection":"wireless",
-              "MAC":"74:51:ba:d2:37:e0",
-              "Type":"other",
-              "LastKnownIP":"10.10.10.183",
-              "Active":"true",
-              "UseAsPresnce":"true",
-              "LastActiveEpoch":"1477906264",
-              "Wait":"6",
-              "Block":"0",
-              "Schedule":"0,0,0,0,0,0,0",
-              "Manufacturer":"Xiaomi",
-              "RSSI":"-66",
-              "ForceInActive":"0",
-              "CanBlock":"true",
-              "Category":"Others"
-              }
+            }
         },
         "innerdbRows": {
             "type": "object",
@@ -559,26 +836,7 @@
                 "ID": {
                     "type": "string"
                 }
-            },
-            "example":{
-              "Name":"MI4W-MiPhone",
-              "Connection":"wireless",
-               "MAC":"74:51:ba:d2:37:e0",
-              "Type":"other",
-              "LastKnownIP":"10.10.10.183",
-              "Active":"true",
-              "UseAsPresence":"true",
-              "LastActiveEpoch":"1477906264",
-              "Wait":"6",
-              "Block":"0",
-              "Schedule":"0,0,0,0,0,0,0",
-              "Manufacturer":"Xiaomi ",
-              "RSSI":"-66",
-              "ForceInActive":"0",
-              "CanBlock":"true",
-              "Category":"Others",
-              "ID":"28"
-              }
+            }
         }
     }
 }
