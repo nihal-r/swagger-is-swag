@@ -192,19 +192,16 @@
                 }
             },
             "example": {
-                "mac": "251175433168140",
-                "badge": 1,
-                "users": "522225988",
-                "time": "1484743183000",
-                "index": "1",
-                "indexValue": "true",
-                "Devicetype": "64",
-                "devicename": "My LED",
-                "alert": "My LED is turned On",
-                "registration_ids": [
-                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
-                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
-                ]
+              "mac": "251175433168140",
+              "badge":1,
+              "users":"522225988",
+              "time":"1484743183000",
+              "index":"1",
+              "indexValue":"true",
+              "Devicetype":"64",
+              "devicename":"My LED",
+              "alert":"My LED is turned On",
+              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
             }
         },
         "directPassGCM": {
@@ -233,15 +230,17 @@
                 }
             },
             "example": {
-                "users": "522225988",
-                "mac": "251175433168140",
-                "time": "1484743183000",
-                "NotiType": "DirectPass",
-                "alert": "Whatever alert you want to send directly and not have saved in any cassandra database",
-                "registration_ids": [
-                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
-                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
-                ]
+              "users":"522225988",
+              "mac": "251175433168140",
+              "time":"1484743183000",
+              "NotiType":"DirectPass",
+              "alert":"Whatever alert you want to send directly and not have saved in any cassandra database",
+
+                
+                
+                
+                
+                "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
             }
         },
         "DevicePayload": {
@@ -261,14 +260,14 @@
                 }
             },
             "example": {
-                "mac": "251175433168140",
-                "user_list": "522225988",
-                "UTCTime": "1484743183000",
-                "data": {
-                    "CommandType": "DynamicIndexUpdated",
-                    "Action": "UpdateIndex",
-                    "HashNow": "5faf3a031d39781cd5d7e77a3522bb49"
-                }
+              "mac": "251175433168140",
+              "user_list": "522225988",
+              "UTCTime": "1484743183000",
+              "data": {
+                "CommandType":"DynamicIndexUpdated",
+                "Action":"UpdateIndex",
+                "HashNow":"5faf3a031d39781cd5d7e77a3522bb49"
+              }
             }
         },
         "directPass": {
@@ -291,11 +290,11 @@
                 }
             },
             "example": {
-                "mac": "251175433168140",
-                "time": "1484743183000",
-                "users": "522225988",
-                "NotiType": "DirectPass",
-                "alert": "Whatever alert you want to send directly and not have saved in any cassandra database"
+              "mac":"251175433168140",
+              "time":"1484743183000",
+              "users":"522225988",
+              "NotiType":"DirectPass",
+              "alert":"Whatever alert you want to send directly and not have saved in any cassandra database"
             }
         },
         "innerData": {
@@ -315,11 +314,11 @@
                 }
             },
             "example": {
-                "CommandType": "DynamicIndexUpdated",
-                "Action": "UpdateIndex",
-                "HashNow": "5faf3a031d39781cd5d7e77a3522bb49"
+              "CommandType":"DynamicIndexUpdated",
+              "Action":"UpdateIndex",
+              "HashNow":"5faf3a031d39781cd5d7e77a3522bb49"
             }
-        },
+          },
         "innerDevices": {
             "type": "object",
             "properties": {
@@ -343,10 +342,10 @@
                     "type": "string"
                 }
             },
-            "example": {
-                "Name": "SWITCH BINARY",
-                "Value": "true"
-            }
+            "example":{
+              "Name":"SWITCH BINARY",
+              "Value":"true"
+              }
         },
         "WifiPayload": {
             "type": "object",
@@ -370,12 +369,12 @@
                     "$ref": "#/definitions/innerdbRows"
                 }
             },
-            "example": {
-                "mac": "251175433168140",
-                "user_list": "522225988",
-                "UTCTime": "1484743183000",
-                "wifiClients": "true"
-            }
+            "example":{
+              "mac":"251175433168140",
+              "user_list":"522225988",
+              "UTCTime":"1484743183000",
+              "wifiClients":"true",
+              }
         },
         "innerItem": {
             "type": "object",
@@ -393,11 +392,11 @@
                     "type": "string"
                 }
             },
-            "example": {
-                "CommandType": "DynamicClientRemoved",
-                "Action": "remove",
-                "HashNow": "759b96aee60cd590a341d733ed9a3a26"
-            }
+            "example":{
+              "CommandType":"DynamicClientRemoved",
+              "Action":"remove",
+              "HashNow":"759b96aee60cd590a341d733ed9a3a26"
+              }
         },
         "innerClient": {
             "type": "object",
@@ -435,18 +434,15 @@
                     }
                 }
             },
-            "example": {
-                "badge": 209,
-                "time": "1484743183000",
-                "alert": "My zenfone 5 (ASUSTek ) just Left ALMOND +",
-                "users": "522256983",
-                "NotiType": "wifiClients",
-                "mac": "251175433168140",
-                "registration_ids": [
-                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
-                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
-                ]
-            }
+            "example":{
+              "badge":209,
+              "time":"1484743183000",
+              "alert":"My zenfone 5 (ASUSTek ) just Left ALMOND +",
+              "users":"522256983",
+              "NotiType":"wifiClients",
+              "mac":"251175433168140",
+              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
+              }
         },
         "innerClientID": {
             "type": "object",
@@ -500,24 +496,24 @@
                     "type": "string"
                 }
             },
-            "example": {
-                "Name": "MI4W-MiPhone",
-                "Connection": "wireless",
-                "MAC": "74:51:ba:d2:37:e0",
-                "Type": "other",
-                "LastKnownIP": "10.10.10.183",
-                "Active": "true",
-                "UseAsPresnce": "true",
-                "LastActiveEpoch": "1477906264",
-                "Wait": "6",
-                "Block": "0",
-                "Schedule": "0,0,0,0,0,0,0",
-                "Manufacturer": "Xiaomi",
-                "RSSI": "-66",
-                "ForceInActive": "0",
-                "CanBlock": "true",
-                "Category": "Others"
-            }
+            "example":{
+              "Name":"MI4W-MiPhone",
+              "Connection":"wireless",
+              "MAC":"74:51:ba:d2:37:e0",
+              "Type":"other",
+              "LastKnownIP":"10.10.10.183",
+              "Active":"true",
+              "UseAsPresnce":"true",
+              "LastActiveEpoch":"1477906264",
+              "Wait":"6",
+              "Block":"0",
+              "Schedule":"0,0,0,0,0,0,0",
+              "Manufacturer":"Xiaomi",
+              "RSSI":"-66",
+              "ForceInActive":"0",
+              "CanBlock":"true",
+              "Category":"Others"
+              }
         },
         "innerdbRows": {
             "type": "object",
@@ -574,25 +570,24 @@
                     "type": "string"
                 }
             },
-            "example": {
-                "Name": "MI4W-MiPhone",
-                "Connection": "wireless",
-                "MAC": "74:51:ba:d2:37:e0",
-                "Type": "other",
-                "LastKnownIP": "10.10.10.183",
-                "Active": "true",
-                "UseAsPresence": "true",
-                "LastActiveEpoch": "1477906264",
-                "Wait": "6",
-                "Block": "0",
-                "Schedule": "0,0,0,0,0,0,0",
-                "Manufacturer": "Xiaomi ",
-                "RSSI": "-66",
-                "ForceInActive": "0",
-                "CanBlock": "true",
-                "Category": "Others",
-                "ID": "28"
-            }
+            "example":{
+              "Name":"MI4W-MiPhone",
+              "Connection":"wireless",
+               "MAC":"74:51:ba:d2:37:e0",
+              "Type":"other",
+              "LastKnownIP":"10.10.10.183",
+              "Active":"true",
+              "UseAsPresence":"true",
+              "LastActiveEpoch":"1477906264",
+              "Wait":"6",
+              "Block":"0",
+              "Schedule":"0,0,0,0,0,0,0",
+              "Manufacturer":"Xiaomi ",
+              "RSSI":"-66",
+              "ForceInActive":"0",
+              "CanBlock":"true",
+              "Category":"Others",
+              "ID":"28"
+              }
         }
     }
-}
