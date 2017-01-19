@@ -263,7 +263,8 @@
             "example": {
                 "mac": "251175433168140",
                 "user_list": "522225988",
-                "UTCTime": "1484743183000"
+                "UTCTime": "1484743183000",
+                "data": "#/definitions/innerData/example"
             }
         },
         "directPass": {
