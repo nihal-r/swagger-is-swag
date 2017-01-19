@@ -21,7 +21,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Alert would be of type - \"client_name\" \"manufacturer\" rejoined \"Al_Name\"",
+                        "description": "Alert would be of type - \"client_name\" \"manufacturer\" just Left \"Al_Name\"",
                         "schema": {
                             "$ref": "#/definitions/GCMWifi1"
                         }
@@ -45,7 +45,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Alert would be of type - \"client_name\" \"manufacturer\" just Left \"Al_Name\"",
+                        "description": "Alert would be of type - \"client_name\" \"manufacturer\" rejioned \"Al_Name\"",
                         "schema": {
                             "$ref": "#/definitions/GCMWifi2"
                         }
@@ -192,16 +192,19 @@
                 }
             },
             "example": {
-              "mac": "251175433168140",
-              "badge":1,
-              "users":"522225988",
-              "time":"1484743183000",
-              "index":"1",
-              "indexValue":"true",
-              "Devicetype":"64",
-              "devicename":"My LED",
-              "alert":"My LED is turned On",
-              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
+                "mac": "251175433168140",
+                "badge": 1,
+                "users": "522225988",
+                "time": "1484743183000",
+                "index": "1",
+                "indexValue": "true",
+                "Devicetype": "64",
+                "devicename": "My LED",
+                "alert": "My LED is turned On",
+                "registration_ids": [
+                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
+                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
+                ]
             }
         },
         "directPassGCM": {
@@ -230,12 +233,15 @@
                 }
             },
             "example": {
-              "users":"522225988",
-              "mac": "251175433168140",
-              "time":"1484743183000",
-              "NotiType":"DirectPass",
-              "alert":"Whatever alert you want to send directly and not have saved in any cassandra database",
-              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
+                "users": "522225988",
+                "mac": "251175433168140",
+                "time": "1484743183000",
+                "NotiType": "DirectPass",
+                "alert": "Whatever alert you want to send directly and not have saved in any cassandra database",
+                "registration_ids": [
+                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
+                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
+                ]
             }
         },
         "DevicePayload": {
@@ -255,23 +261,23 @@
                 }
             },
             "example": {
-              "mac": "251175433168140",
-              "user_list": "522225988",
-              "UTCTime": "1484743183000",
-              "data":{
-                "CommandType":"DynamicIndexUpdated",
-                "Action":"UpdateIndex",
-                "HashNow":"5faf3a031d39781cd5d7e77a3522bb49",
-                "Devices":{  
-                  "16":{
-                    "DeviceValues":{
-                      "1":{ 
-                        "Name":"SWITCH BINARY",
-                        "Value":"true"
+                "mac": "251175433168140",
+                "user_list": "522225988",
+                "UTCTime": "1484743183000",
+                "data": {
+                    "CommandType": "DynamicIndexUpdated",
+                    "Action": "UpdateIndex",
+                    "HashNow": "5faf3a031d39781cd5d7e77a3522bb49",
+                    "Devices": {
+                        "16": {
+                            "DeviceValues": {
+                                "1": {
+                                    "Name": "SWITCH BINARY",
+                                    "Value": "true"
+                                }
+                            }
                         }
-                      }
                     }
-                  }
                 }
             }
         },
@@ -295,11 +301,11 @@
                 }
             },
             "example": {
-              "mac":"251175433168140",
-              "time":"1484743183000",
-              "users":"522225988",
-              "NotiType":"DirectPass",
-              "alert":"Whatever alert you want to send directly and not have saved in any cassandra database",
+                "mac": "251175433168140",
+                "time": "1484743183000",
+                "users": "522225988",
+                "NotiType": "DirectPass",
+                "alert": "Whatever alert you want to send directly and not have saved in any cassandra database"
             }
         },
         "innerData": {
@@ -318,22 +324,22 @@
                     "$ref": "#/definitions/innerDevices"
                 }
             },
-            "example":{
-                "CommandType":"DynamicIndexUpdated",
-                "Action":"UpdateIndex",
-                "HashNow":"5faf3a031d39781cd5d7e77a3522bb49",
-                "Devices":{  
-                  "16":{
-                    "DeviceValues":{
-                      "1":{ 
-                        "Name":"SWITCH BINARY",
-                        "Value":"true"
+            "example": {
+                "CommandType": "DynamicIndexUpdated",
+                "Action": "UpdateIndex",
+                "HashNow": "5faf3a031d39781cd5d7e77a3522bb49",
+                "Devices": {
+                    "16": {
+                        "DeviceValues": {
+                            "1": {
+                                "Name": "SWITCH BINARY",
+                                "Value": "true"
+                            }
                         }
-                      }
                     }
                 }
-              }
-          },
+            }
+        },
         "innerDevices": {
             "type": "object",
             "properties": {
@@ -346,14 +352,14 @@
                     }
                 }
             },
-            "example":{
-               "DeviceValues":{
-                 "1":{
-                   "Name":"SWITCH BINARY",
-                   "Value":"true"
-                   }
+            "example": {
+                "DeviceValues": {
+                    "1": {
+                        "Name": "SWITCH BINARY",
+                        "Value": "true"
+                    }
                 }
-              }
+            }
         },
         "innerIndexID": {
             "type": "object",
@@ -365,10 +371,10 @@
                     "type": "string"
                 }
             },
-            "example":{
-              "Name":"SWITCH BINARY",
-              "Value":"true"
-              }
+            "example": {
+                "Name": "SWITCH BINARY",
+                "Value": "true"
+            }
         },
         "WifiPayload2": {
             "type": "object",
@@ -392,56 +398,56 @@
                     "$ref": "#/definitions/innerdbRows"
                 }
             },
-            "example":{
-              "mac":"251175433168140",
-              "user_list":"522225988",
-              "UTCTime":"1484743183000",
-              "wifiClients":"true",
-              "data":{
-                "CommandType":"DynamicClientJoined",
-                "Action":"update",
-                "HashNow":"759b96aee60cd590a341d733ed9a3a26",
-                "Clients":{  
-                  "29":{ 
-                     "Name":"harish zenfone 5",
-                     "Connection":"wireless",
-                     "MAC":"38:2c:4a:1f:5a:68",
-                     "Type":"other",
-                     "LastKnownIP":"10.10.10.177",
-                     "Active":"false",
-                     "UseAsPresence":"true",
-                     "LastActiveEpoch":"1477906060",
-                     "Wait":"1",
-                     "Block":"0",
-                     "Schedule":"0,0,0,0,0,0,0",
-                     "Manufacturer":"ASUSTek ",
-                     "RSSI":"-27",
-                     "ForceInActive":"0",
-                     "CanBlock":"true",
-                     "Category":"Others"
+            "example": {
+                "mac": "251175433168140",
+                "user_list": "522225988",
+                "UTCTime": "1484743183000",
+                "wifiClients": "true",
+                "data": {
+                    "CommandType": "DynamicClientJoined",
+                    "Action": "update",
+                    "HashNow": "759b96aee60cd590a341d733ed9a3a26",
+                    "Clients": {
+                        "29": {
+                            "Name": "harish zenfone 5",
+                            "Connection": "wireless",
+                            "MAC": "38:2c:4a:1f:5a:68",
+                            "Type": "other",
+                            "LastKnownIP": "10.10.10.177",
+                            "Active": "false",
+                            "UseAsPresence": "true",
+                            "LastActiveEpoch": "1477906060",
+                            "Wait": "1",
+                            "Block": "0",
+                            "Schedule": "0,0,0,0,0,0,0",
+                            "Manufacturer": "ASUSTek ",
+                            "RSSI": "-27",
+                            "ForceInActive": "0",
+                            "CanBlock": "true",
+                            "Category": "Others"
+                        }
                     }
-                  }
                 },
-                "dbrows":{
-                  "Name":"harish zenfone 5",
-                  "Connection":"wireless",
-                  "MAC":"38:2c:4a:1f:5a:68",
-                  "Type":"other",
-                  "LastKnownIP":"10.10.10.177",
-                  "Active":"false",
-                  "UseAsPresence":"true",
-                  "LastActiveEpoch":"1477906060",
-                  "Wait":"1",
-                  "Block":"0",
-                  "Schedule":"0,0,0,0,0,0,0",
-                  "Manufacturer":"ASUSTek ",
-                  "RSSI":"-27",
-                  "ForceInActive":"0",
-                  "CanBlock":"true",
-                  "Category":"Others",
-                  "ID":"28"
-                  }
-              }
+                "dbrows": {
+                    "Name": "harish zenfone 5",
+                    "Connection": "wireless",
+                    "MAC": "38:2c:4a:1f:5a:68",
+                    "Type": "other",
+                    "LastKnownIP": "10.10.10.177",
+                    "Active": "false",
+                    "UseAsPresence": "true",
+                    "LastActiveEpoch": "1477906060",
+                    "Wait": "1",
+                    "Block": "0",
+                    "Schedule": "0,0,0,0,0,0,0",
+                    "Manufacturer": "ASUSTek ",
+                    "RSSI": "-27",
+                    "ForceInActive": "0",
+                    "CanBlock": "true",
+                    "Category": "Others",
+                    "ID": "28"
+                }
+            }
         },
         "WifiPayload3": {
             "type": "object",
@@ -465,56 +471,56 @@
                     "$ref": "#/definitions/innerdbRows"
                 }
             },
-            "example":{
-              "mac":"251175433168140",
-              "user_list":"522225988",
-              "UTCTime":"1484743183000",
-              "wifiClients":"true",
-              "data":{
-                "CommandType":"DynamicClientAdded",
-                "Action":"add",
-                "HashNow":"759b96aee60cd590a341d733ed9a3a26",
-                "Clients":{  
-                  "29":{ 
-                     "Name":"harish zenfone 5",
-                     "Connection":"wireless",
-                     "MAC":"38:2c:4a:1f:5a:68",
-                     "Type":"other",
-                     "LastKnownIP":"10.10.10.177",
-                     "Active":"false",
-                     "UseAsPresence":"true",
-                     "LastActiveEpoch":"1477906060",
-                     "Wait":"1",
-                     "Block":"0",
-                     "Schedule":"0,0,0,0,0,0,0",
-                     "Manufacturer":"ASUSTek ",
-                     "RSSI":"-27",
-                     "ForceInActive":"0",
-                     "CanBlock":"true",
-                     "Category":"Others"
+            "example": {
+                "mac": "251175433168140",
+                "user_list": "522225988",
+                "UTCTime": "1484743183000",
+                "wifiClients": "true",
+                "data": {
+                    "CommandType": "DynamicClientAdded",
+                    "Action": "add",
+                    "HashNow": "759b96aee60cd590a341d733ed9a3a26",
+                    "Clients": {
+                        "29": {
+                            "Name": "harish zenfone 5",
+                            "Connection": "wireless",
+                            "MAC": "38:2c:4a:1f:5a:68",
+                            "Type": "other",
+                            "LastKnownIP": "10.10.10.177",
+                            "Active": "false",
+                            "UseAsPresence": "true",
+                            "LastActiveEpoch": "1477906060",
+                            "Wait": "1",
+                            "Block": "0",
+                            "Schedule": "0,0,0,0,0,0,0",
+                            "Manufacturer": "ASUSTek ",
+                            "RSSI": "-27",
+                            "ForceInActive": "0",
+                            "CanBlock": "true",
+                            "Category": "Others"
+                        }
                     }
-                  }
                 },
-                "dbrows":{
-                  "Name":"harish zenfone 5",
-                  "Connection":"wireless",
-                  "MAC":"38:2c:4a:1f:5a:68",
-                  "Type":"other",
-                  "LastKnownIP":"10.10.10.177",
-                  "Active":"false",
-                  "UseAsPresence":"true",
-                  "LastActiveEpoch":"1477906060",
-                  "Wait":"1",
-                  "Block":"0",
-                  "Schedule":"0,0,0,0,0,0,0",
-                  "Manufacturer":"ASUSTek ",
-                  "RSSI":"-27",
-                  "ForceInActive":"0",
-                  "CanBlock":"true",
-                  "Category":"Others",
-                  "ID":"28"
-                  }
-              }
+                "dbrows": {
+                    "Name": "harish zenfone 5",
+                    "Connection": "wireless",
+                    "MAC": "38:2c:4a:1f:5a:68",
+                    "Type": "other",
+                    "LastKnownIP": "10.10.10.177",
+                    "Active": "false",
+                    "UseAsPresence": "true",
+                    "LastActiveEpoch": "1477906060",
+                    "Wait": "1",
+                    "Block": "0",
+                    "Schedule": "0,0,0,0,0,0,0",
+                    "Manufacturer": "ASUSTek ",
+                    "RSSI": "-27",
+                    "ForceInActive": "0",
+                    "CanBlock": "true",
+                    "Category": "Others",
+                    "ID": "28"
+                }
+            }
         },
         "WifiPayload4": {
             "type": "object",
@@ -538,60 +544,57 @@
                     "$ref": "#/definitions/innerdbRows"
                 }
             },
-            "example":{
-              "mac":"251175433168140",
-              "user_list":"522225988",
-              "UTCTime":"1484743183000",
-              "wifiClients":"true",
-              "data":{
-                "CommandType":"DynamicClientRemoved",
-                "Action":"remove",
-                "HashNow":"759b96aee60cd590a341d733ed9a3a26",
-                "Clients":{  
-                  "29":{ 
-                     "Name":"harish zenfone 5",
-                     "Connection":"wireless",
-                     "MAC":"38:2c:4a:1f:5a:68",
-                     "Type":"other",
-                     "LastKnownIP":"10.10.10.177",
-                     "Active":"false",
-                     "UseAsPresence":"true",
-                     "LastActiveEpoch":"1477906060",
-                     "Wait":"1",
-                     "Block":"0",
-                     "Schedule":"0,0,0,0,0,0,0",
-                     "Manufacturer":"ASUSTek ",
-                     "RSSI":"-27",
-                     "ForceInActive":"0",
-                     "CanBlock":"true",
-                     "Category":"Others"
+            "example": {
+                "mac": "251175433168140",
+                "user_list": "522225988",
+                "UTCTime": "1484743183000",
+                "wifiClients": "true",
+                "data": {
+                    "CommandType": "DynamicClientRemoved",
+                    "Action": "remove",
+                    "HashNow": "759b96aee60cd590a341d733ed9a3a26",
+                    "Clients": {
+                        "29": {
+                            "Name": "harish zenfone 5",
+                            "Connection": "wireless",
+                            "MAC": "38:2c:4a:1f:5a:68",
+                            "Type": "other",
+                            "LastKnownIP": "10.10.10.177",
+                            "Active": "false",
+                            "UseAsPresence": "true",
+                            "LastActiveEpoch": "1477906060",
+                            "Wait": "1",
+                            "Block": "0",
+                            "Schedule": "0,0,0,0,0,0,0",
+                            "Manufacturer": "ASUSTek ",
+                            "RSSI": "-27",
+                            "ForceInActive": "0",
+                            "CanBlock": "true",
+                            "Category": "Others"
+                        }
                     }
-                  }
                 },
-                "dbrows":{
-                  "Name":"harish zenfone 5",
-                  "Connection":"wireless",
-                  "MAC":"38:2c:4a:1f:5a:68",
-                  "Type":"other",
-                  "LastKnownIP":"10.10.10.177",
-                  "Active":"false",
-                  "UseAsPresence":"true",
-                  "LastActiveEpoch":"1477906060",
-                  "Wait":"1",
-                  "Block":"0",
-                  "Schedule":"0,0,0,0,0,0,0",
-                  "Manufacturer":"ASUSTek ",
-                  "RSSI":"-27",
-                  "ForceInActive":"0",
-                  "CanBlock":"true",
-                  "Category":"Others",
-                  "ID":"28"
-                  }
-              }
+                "dbrows": {
+                    "Name": "harish zenfone 5",
+                    "Connection": "wireless",
+                    "MAC": "38:2c:4a:1f:5a:68",
+                    "Type": "other",
+                    "LastKnownIP": "10.10.10.177",
+                    "Active": "false",
+                    "UseAsPresence": "true",
+                    "LastActiveEpoch": "1477906060",
+                    "Wait": "1",
+                    "Block": "0",
+                    "Schedule": "0,0,0,0,0,0,0",
+                    "Manufacturer": "ASUSTek ",
+                    "RSSI": "-27",
+                    "ForceInActive": "0",
+                    "CanBlock": "true",
+                    "Category": "Others",
+                    "ID": "28"
+                }
+            }
         },
-        
-        
-        
         "WifiPayload1": {
             "type": "object",
             "properties": {
@@ -614,58 +617,57 @@
                     "$ref": "#/definitions/innerdbRows"
                 }
             },
-            "example":{
-              "mac":"251175433168140",
-              "user_list":"522225988",
-              "UTCTime":"1484743183000",
-              "wifiClients":"true",
-              "data":{
-                "CommandType":"DynamicClientLeft",
-                "Action":"update",
-                "HashNow":"759b96aee60cd590a341d733ed9a3a26",
-                "Clients":{  
-                  "29":{ 
-                     "Name":"harish zenfone 5",
-                     "Connection":"wireless",
-                     "MAC":"38:2c:4a:1f:5a:68",
-                     "Type":"other",
-                     "LastKnownIP":"10.10.10.177",
-                     "Active":"false",
-                     "UseAsPresence":"true",
-                     "LastActiveEpoch":"1477906060",
-                     "Wait":"1",
-                     "Block":"0",
-                     "Schedule":"0,0,0,0,0,0,0",
-                     "Manufacturer":"ASUSTek ",
-                     "RSSI":"-27",
-                     "ForceInActive":"0",
-                     "CanBlock":"true",
-                     "Category":"Others"
+            "example": {
+                "mac": "251175433168140",
+                "user_list": "522225988",
+                "UTCTime": "1484743183000",
+                "wifiClients": "true",
+                "data": {
+                    "CommandType": "DynamicClientLeft",
+                    "Action": "update",
+                    "HashNow": "759b96aee60cd590a341d733ed9a3a26",
+                    "Clients": {
+                        "29": {
+                            "Name": "harish zenfone 5",
+                            "Connection": "wireless",
+                            "MAC": "38:2c:4a:1f:5a:68",
+                            "Type": "other",
+                            "LastKnownIP": "10.10.10.177",
+                            "Active": "false",
+                            "UseAsPresence": "true",
+                            "LastActiveEpoch": "1477906060",
+                            "Wait": "1",
+                            "Block": "0",
+                            "Schedule": "0,0,0,0,0,0,0",
+                            "Manufacturer": "ASUSTek ",
+                            "RSSI": "-27",
+                            "ForceInActive": "0",
+                            "CanBlock": "true",
+                            "Category": "Others"
+                        }
                     }
-                  }
                 },
-                "dbrows":{
-                  "Name":"harish zenfone 5",
-                  "Connection":"wireless",
-                  "MAC":"38:2c:4a:1f:5a:68",
-                  "Type":"other",
-                  "LastKnownIP":"10.10.10.177",
-                  "Active":"false",
-                  "UseAsPresence":"true",
-                  "LastActiveEpoch":"1477906060",
-                  "Wait":"1",
-                  "Block":"0",
-                  "Schedule":"0,0,0,0,0,0,0",
-                  "Manufacturer":"ASUSTek ",
-                  "RSSI":"-27",
-                  "ForceInActive":"0",
-                  "CanBlock":"true",
-                  "Category":"Others",
-                  "ID":"28"
-                  }
-              }
+                "dbrows": {
+                    "Name": "harish zenfone 5",
+                    "Connection": "wireless",
+                    "MAC": "38:2c:4a:1f:5a:68",
+                    "Type": "other",
+                    "LastKnownIP": "10.10.10.177",
+                    "Active": "false",
+                    "UseAsPresence": "true",
+                    "LastActiveEpoch": "1477906060",
+                    "Wait": "1",
+                    "Block": "0",
+                    "Schedule": "0,0,0,0,0,0,0",
+                    "Manufacturer": "ASUSTek ",
+                    "RSSI": "-27",
+                    "ForceInActive": "0",
+                    "CanBlock": "true",
+                    "Category": "Others",
+                    "ID": "28"
+                }
+            }
         },
-
         "innerItem": {
             "type": "object",
             "properties": {
@@ -681,7 +683,7 @@
                 "HashNow": {
                     "type": "string"
                 }
-            },
+            }
         },
         "innerClient": {
             "type": "object",
@@ -719,15 +721,18 @@
                     }
                 }
             },
-            "example":{
-              "badge":209,
-              "time":"1484743183000",
-              "alert":"Harish zenfone 5 (ASUSTek ) just Left ALMOND +",
-              "users":"522225988",
-              "NotiType":"wifiClients",
-              "mac":"251175433168140",
-              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
-              }
+            "example": {
+                "badge": 209,
+                "time": "1484743183000",
+                "alert": "Harish zenfone 5 (ASUSTek ) just Left ALMOND +",
+                "users": "522225988",
+                "NotiType": "wifiClients",
+                "mac": "251175433168140",
+                "registration_ids": [
+                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
+                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
+                ]
+            }
         },
         "GCMWifi4": {
             "type": "object",
@@ -757,15 +762,18 @@
                     }
                 }
             },
-            "example":{
-              "badge":209,
-              "time":"1484743183000",
-              "alert":"Harish zenfone 5 (ASUSTek ) just Removed From ALMOND +",
-              "users":"522225988",
-              "NotiType":"wifiClients",
-              "mac":"251175433168140",
-              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
-              }
+            "example": {
+                "badge": 209,
+                "time": "1484743183000",
+                "alert": "ALMOND +'s Harish zenfone 5 is reset",
+                "users": "522225988",
+                "NotiType": "wifiClients",
+                "mac": "251175433168140",
+                "registration_ids": [
+                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
+                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
+                ]
+            }
         },
         "GCMWifi3": {
             "type": "object",
@@ -795,15 +803,18 @@
                     }
                 }
             },
-            "example":{
-              "badge":209,
-              "time":"1484743183000",
-              "alert":"Harish zenfone 5 (ASUSTek ) just Added to ALMOND +",
-              "users":"522225988",
-              "NotiType":"wifiClients",
-              "mac":"251175433168140",
-              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
-              }
+            "example": {
+                "badge": 209,
+                "time": "1484743183000",
+                "alert": "An unknown device ASUSTEK just joined ALMOND +",
+                "users": "522225988",
+                "NotiType": "wifiClients",
+                "mac": "251175433168140",
+                "registration_ids": [
+                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
+                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
+                ]
+            }
         },
         "GCMWifi2": {
             "type": "object",
@@ -833,15 +844,18 @@
                     }
                 }
             },
-            "example":{
-              "badge":209,
-              "time":"1484743183000",
-              "alert":"Harish zenfone 5 (ASUSTek ) just Joined ALMOND +",
-              "users":"522225988",
-              "NotiType":"wifiClients",
-              "mac":"251175433168140",
-              "registration_ids":["APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY", "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"]
-              }
+            "example": {
+                "badge": 209,
+                "time": "1484743183000",
+                "alert": "Harish zenfone 5 (ASUSTek ) rejoined ALMOND +",
+                "users": "522225988",
+                "NotiType": "wifiClients",
+                "mac": "251175433168140",
+                "registration_ids": [
+                    "APA91bG4MPBaOIiU2GdXWEiARhru-T8qIQqmLUZT1vgJwcSI5mU5ngCeJxRkLYyMHkI00pK0rFmFALInYR4G_URwmX7oAIxMxhP3wPzyW0t1rRx0EBjMmVqESxsxvzVZopaQZQFY4kHVEensSrohYfvSzJGjZK3iX5Ud02LjafmTjTHMeibOytY",
+                    "APA91bGlJNJd3XGIdVDwdcqpRmXJOBQhYvYqLoZw9jeEKpwP4EW959CP6hL4e27QLYfKKrYZ95WKsc4GfOmSeDn2MUTG8GcereG6JveqlhwrAHMOfv5B_D9jnLQHn9mCQDqQqE7mXnAo6__d0ABXb3kEnDVgpbMzgoyXGvedxWe7gxR7YNCI4BQ"
+                ]
+            }
         },
         "innerClientID": {
             "type": "object",
