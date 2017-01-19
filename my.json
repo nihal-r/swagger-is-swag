@@ -265,7 +265,9 @@
                 "user_list": "522225988",
                 "UTCTime": "1484743183000",
                 "data": {
-                    "$ref": "#/definitions/innerData/example"
+                    "CommandType": "DynamicIndexUpdated",
+                    "Action": "UpdateIndex",
+                    "HashNow": "5faf3a031d39781cd5d7e77a3522bb49"
                 }
             }
         },
