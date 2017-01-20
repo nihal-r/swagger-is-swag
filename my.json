@@ -806,7 +806,7 @@
             "example": {
                 "badge": 209,
                 "time": "1484743183000",
-                "alert": "An unknown device ASUSTEK just joined ALMOND +",
+                "alert": "An unknown device ASUSTek just joined ALMOND +",
                 "users": "522225988",
                 "NotiType": "wifiClients",
                 "mac": "251175433168140",
